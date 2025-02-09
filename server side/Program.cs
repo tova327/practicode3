@@ -37,7 +37,7 @@ app.UseSwagger();
         options.RoutePrefix = string.Empty; // This will serve the Swagger UI at the app's root
     });
 app.UseCors("AllowAll");
-
+app.MapGet("/", () => "wellDone API is running");
 app.MapGet("/todolist", (ToDoDbContext todo) => {
     
     return todo.Items.ToList();});

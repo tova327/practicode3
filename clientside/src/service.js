@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.baseURL =`${process.env.REACT_APP_API_KEY}`;
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
 // Add a response interceptor
 axios.interceptors.response.use(

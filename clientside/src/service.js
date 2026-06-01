@@ -21,6 +21,7 @@ axios.interceptors.response.use(
 
 export default {
   getTasks: async () => {
+   console.log("API =", process.env.REACT_APP_API_URL);
     const result = await axios.get(`/todolist`);
     return result.data;
   },
